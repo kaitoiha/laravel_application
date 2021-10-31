@@ -16,7 +16,8 @@ class PostController extends Controller
     }
     // 登録（投稿）画面表示
     public function create(){
-        return view("posts.create");
+        // return view("posts.create");
+        dd('「投稿画面だよ！！」');
     } 
     // 登録（投稿）処理
     public function store(PostRequest $request){
@@ -48,8 +49,8 @@ class PostController extends Controller
             return redirect('/');
         }
 
-        // edit.blade.phpを表示する(これから作成)
-        return view('posts.edit', ['post' => $post]);
+        // return view('posts.edit', ['post' => $post]);
+        dd($post);
     }
 
     // 投稿編集を更新
